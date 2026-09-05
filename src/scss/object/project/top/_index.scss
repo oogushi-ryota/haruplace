@@ -1,0 +1,17 @@
+@use "./global/variables" as *;
+@use "./global/mixins" as *;
+@use "./global/color" as *;
+
+.p-top {
+  & {
+    
+  }
+
+  @include pc {
+    padding-bottom: 12rem;
+  }
+
+  @include sp {
+    padding-bottom: 8rem;
+  }
+}

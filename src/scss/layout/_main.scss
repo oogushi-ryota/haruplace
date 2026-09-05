@@ -1,0 +1,18 @@
+@use "global/variables" as *;
+@use "global/mixins" as *;
+@use "global/color" as *;
+@use "global/functions" as *;
+
+.l-main {
+  & {
+    
+  }
+
+  @include pc {
+    padding-top: 10rem;
+  }
+
+  @include sp {
+    padding-top: 8rem;
+  }
+}
