@@ -6,7 +6,6 @@
   & {
     width: 100%;
     background-color: color(wt,base);
-    border-bottom: solid 1px $base-font-color;
     position: fixed;
     top: 0;
     left: 0;
@@ -35,26 +34,18 @@
       }
     }
 
-    &__nav-link,
-    &__nav-btn {
-      font-family: $ff-oswald;
+    &__nav-link {
+      font-family: $ff-roboto;
       color: $base-font-color;
       font-weight: $base-font-bold;
-      letter-spacing: .03em;
       line-height: 100%;
+      letter-spacing: .05em;
       display: inline-block;
       @include text-trim;
     }
 
-    &__nav-btn {
-      color: color(wt,base);
-      background-color: color(gld,base);
-      border-radius: 100vmax;
-      border: solid 1px color(gld,base);
-    }
-
     &__hamburger-line {
-      background-color: color(gld,base);
+      background-color: color(bk,base);
       position: absolute;
       top: 50%;
       left: 50%;
@@ -73,7 +64,7 @@
     }
 
     &__logo-link {
-      width: 21.5rem;
+      width: 14rem;
       @include hover-opacity;
     }
 
@@ -87,12 +78,6 @@
     &__nav-link {
       font-size: 2.4rem;
       @include hover-opacity;
-    }
-
-    &__nav-btn {
-      font-size: 2.4rem;
-      padding: 2rem 8rem;
-      @include hover-btn;
     }
 
     &__hamburger {
@@ -113,7 +98,7 @@
     }
 
     &__logo-link {
-      width: 16rem;
+      width: 10rem;
     }
 
     &__nav {
@@ -141,11 +126,6 @@
       & + & {
         margin-top: 5.6rem;
       }
-    }
-
-    &__nav-btn {
-      font-size: 2.4rem;
-      padding: 2rem 8rem;
     }
 
     &__hamburger {

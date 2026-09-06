@@ -1,29 +1,38 @@
-import $ from "jquery";
-
 // ▼ハンバーガーメニュー
 export function initHamburgerMenu({
   navSelector = ".js-nav",
   btnSelector = ".js-nav-btn",
   extraTargets = [],
 } = {}) {
-  const $nav = $(navSelector);
-  const $btn = $(btnSelector);
-  const $body = $("body");
-  const $extraEls = extraTargets.map(sel => $(sel));
+  const navEls = document.querySelectorAll(navSelector);
+  const btnEls = document.querySelectorAll(btnSelector);
+  const body = document.body;
+  const extraEls = extraTargets.flatMap(sel => Array.from(document.querySelectorAll(sel)));
 
   function toggleMenu(isOpen) {
-    const method = isOpen ? "addClass" : "removeClass";
+    const method = isOpen ? "add" : "remove";
 
-    $nav[method]("is-active");
-    $btn[method]("is-active");
-    $body[method]("is-active");
-    $extraEls.forEach($el => $el[method]("is-active"));
+    navEls.forEach(nav => nav.classList[method]("is-active"));
+    btnEls.forEach(btn => btn.classList[method]("is-active"));
+    body.classList[method]("is-active");
+    extraEls.forEach(el => el.classList[method]("is-active"));
   }
 
   // ハンバーガーボタンクリック
-  $btn.on("click", () => {
-    const isOpening = !$nav.hasClass("is-active");
-    toggleMenu(isOpening);
+  btnEls.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const isOpening = ![...navEls].some(nav => nav.classList.contains("is-active"));
+      toggleMenu(isOpening);
+    });
+  });
+
+  // メニュー内のリンククリックで閉じる
+  navEls.forEach(nav => {
+    nav.addEventListener("click", (e) => {
+      if (e.target.closest("a")) {
+        toggleMenu(false);
+      }
+    });
   });
 }
 // ▲ハンバーガーメニュー

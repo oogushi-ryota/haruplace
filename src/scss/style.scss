@@ -11,51 +11,24 @@
 @use "layout/header" as *;
 @use "layout/footer" as *;
 @use "layout/main" as *;
-@use "layout/under-page" as *;
-@use "layout/lower" as *;
 
 // ===================================
 // Component
 // ===================================
 @use "object/component/inner" as *;
-@use "object/component/ttl" as *;
-@use "object/component/artist-post" as *;
-@use "object/component/talent-post" as *;
-
-@use "object/component/top-secttl" as *;
-@use "object/component/contact-sec" as *;
-@use "object/component/btn" as *;
-@use "object/component/under-ttl" as *;
-@use "object/component/pagenation" as *;
+@use "object/component/top-ttl" as *;
 
 // ===================================
 // Project
 // ===================================
 // トップページ
 @use "object/project/top/index" as *;
-@use "object/project/top/appeal" as *;
 @use "object/project/top/fv" as *;
-@use "object/project/top/artist" as *;
-@use "object/project/top/talent" as *;
-
-// アーティストページ
-@use "object/project/artist/index" as *;
-@use "object/project/artist/details" as *;
-@use "object/project/artist/member" as *;
-
-// タレントページ
-@use "object/project/talent/index" as *;
-@use "object/project/talent/details" as *;
-
-// 会社概要ページ
-@use "object/project/company/index" as *;
-@use "object/project/company/message" as *;
-@use "object/project/company/details" as *;
-
-// お問い合わせページ
-@use "object/project/contact/index" as *;
-@use "object/project/contact/form" as *;
-
+@use "object/project/top/lead" as *;
+@use "object/project/top/service" as *;
+@use "object/project/top/bar" as *;
+@use "object/project/top/vision" as *;
+@use "object/project/top/company" as *;
 
 // ===================================
 // Utility

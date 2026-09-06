@@ -1,0 +1,100 @@
+@use "./global/variables" as *;
+@use "./global/mixins" as *;
+@use "./global/color" as *;
+
+.p-top-vision {
+  & {
+    &__txt {
+      font-weight: $base-font-medium;
+      letter-spacing: .05em;
+    }
+
+    &__wrap {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &__img {
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__txtblk-ttl {
+      font-weight: $base-font-bold;
+      letter-spacing: .05em;
+    }
+
+    &__txtblk-txt {
+      font-weight: $base-font-medium;
+      letter-spacing: .05em;
+      line-height: 150%;
+    }
+  }
+
+  @include pc {
+    padding: 8rem 0;
+
+    &__txt {
+      font-size: 1.8rem;
+      line-height: 100%;
+      margin-top: 3.2rem;
+    }
+
+    &__wrap {
+      gap: 5.6rem;
+      margin-top: 4rem;
+    }
+
+    &__img {
+      width: 60rem;
+    }
+
+    &__txtblk {
+      margin-top: 4rem;
+    }
+
+    &__txtblk-ttl {
+      font-size: 3.2rem;
+      line-height: 100%;
+    }
+
+    &__txtblk-txt {
+      font-size: 1.8rem;
+      margin-top: 3.2rem;
+    }
+  }
+
+  @include sp {
+    padding: 5.6rem 0;
+
+    &__txt {
+      font-size: 1.6rem;
+      line-height: 150%;
+      margin-top: 3.2rem;
+    }
+
+    &__wrap {
+      flex-direction: column;
+      gap: 3.2rem;
+      margin-top: 3.2rem;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    &__txtblk-ttl {
+      font-size: 2.4rem;
+      line-height: 130%;
+    }
+
+    &__txtblk-txt {
+      font-size: 1.4em;
+      margin-top: 2.4rem;
+    }
+  }
+}

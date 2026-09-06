@@ -1,0 +1,97 @@
+@use "./global/variables" as *;
+@use "./global/mixins" as *;
+@use "./global/color" as *;
+
+.p-top-bar {
+  & {
+    &__logo {
+      margin-inline: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__table {
+      display: block;
+      margin-inline: auto;
+    }
+
+    &__tbody {
+      display: block;
+    }
+
+    &__tr {
+      display: flex;
+      justify-content: flex-start;
+      border-bottom: solid 1px color(wt,base);
+    }
+
+    &__th,
+    &__td {
+      color: color(wt,base);
+      font-weight: $base-font-bold;
+      letter-spacing: .05em;
+      text-align: left;
+      line-height: 150%;
+    }
+  }
+
+  @include pc {
+    margin-top: 5.6rem;
+
+    &__logo {
+      width: 27.2rem;
+      margin-top: 3.2rem;
+    }
+
+    &__table {
+      width: 62rem;
+      margin-top: 2rem;
+    }
+
+    &__tr {
+      align-items: flex-start;
+      gap: 16rem;
+      padding: 2rem;
+    }
+
+    &__th {
+      font-size: 2rem;
+      min-width: 8.4rem;
+    }
+
+    &__td {
+      font-size: 2rem;
+    }
+  }
+
+  @include sp {
+    margin-top: 4rem;
+
+    &__logo {
+      width: 100%;
+      margin-top: 3.2rem;
+    }
+
+    &__table {
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    &__tr {
+      align-items: center;
+      gap: 5.6rem;
+      padding: 1.2rem;
+    }
+
+    &__th {
+      font-size: 1.4rem;
+      min-width: 6rem;
+    }
+
+    &__td {
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -8,16 +8,8 @@
   }
 
   @include pc {
-    width: 148rem;
+    width: 132rem;
     padding: 0 2rem;
-
-    &--128 {
-      width: 132rem;
-    }
-
-    &--102 {
-      width: 106rem;
-    }
   }
 
   @include sp {

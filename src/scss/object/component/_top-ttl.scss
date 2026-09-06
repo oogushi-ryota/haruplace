@@ -1,0 +1,60 @@
+@use "global/variables" as *;
+@use "global/mixins" as *;
+@use "global/color" as *;
+
+.c-top-ttl {
+  & {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    &--center {
+      align-items: center;
+    }
+
+    &__en {
+      font-family: $ff-roboto;
+      letter-spacing: .05em;
+      line-height: 100%;
+
+      &--wt {
+        color: color(wt,base);
+      }
+    }
+
+    &__ja {
+      font-weight: $base-font-medium;
+      letter-spacing: .05em;
+      line-height: 100%;
+
+      &--wt {
+        color: color(wt,base);
+      }
+    }
+  }
+
+  @include pc {
+    gap: .8rem;
+
+    &__en {
+      font-size: 4rem;
+    }
+
+    &__ja {
+      font-size: 1.6rem;
+    }
+  }
+
+  @include sp {
+    gap: .4rem;
+
+    &__en {
+      font-size: 3.2rem;
+    }
+
+    &__ja {
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -33,7 +33,6 @@
     "sass": "^1.85.1"
   },
   "dependencies": {
-    "jquery": "^3.7.1",
     "swiper": "^9.2.3"
   }
 }

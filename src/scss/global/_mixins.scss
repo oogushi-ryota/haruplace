@@ -30,11 +30,6 @@
 
   &:hover {
     background-color: color(wt,base);
-    color: color(gld,base);
-
-    &::after {
-      color: color(gld,base);
-    }
   }
 }
 

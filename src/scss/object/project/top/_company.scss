@@ -1,0 +1,103 @@
+@use "./global/variables" as *;
+@use "./global/mixins" as *;
+@use "./global/color" as *;
+
+.p-top-company {
+  & {
+    border-top: solid 1px color(bk,base);
+
+    &__table,
+    &__tbody {
+      display: block;
+    }
+
+    &__table {
+      border: solid 1px color(bk,base);
+    }
+
+    &__tr {
+      display: flex;
+      justify-content: flex-start;
+
+      & + & {
+        .p-top-company__th {
+          border-top: solid 1px color(wt,base);
+        }
+
+        .p-top-company__td {
+          border-top: solid 1px color(bk,base);
+        }
+      }
+    }
+
+    &__th {
+      color: color(wt,base);
+      font-weight: $base-font-bold;
+      letter-spacing: .05em;
+      line-height: 150%;
+      text-align: left;
+      background-color: color(bk,base);
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    &__td {
+      font-weight: $base-font-medium;
+      letter-spacing: .05em;
+      line-height: 150%;
+      width: 100%;
+    }
+  }
+
+  @include pc {
+    padding: 8rem 0;
+
+    &__wrap {
+      width: 102rem;
+      margin-inline: auto;
+    }
+
+    &__table {
+      margin-top: 3.2rem;
+    }
+
+    &__tr {
+      align-items: stretch;
+    }
+
+    &__th {
+      font-size: 2rem;
+      min-width: 26rem;
+      padding: 2.4rem 4rem;
+    }
+
+    &__td {
+      font-size: 2rem;
+      padding: 2.4rem 4rem;
+    }
+  }
+
+  @include sp {
+    padding: 5.6rem 0;
+
+    &__wrap {
+      width: 100%;
+    }
+
+    &__table {
+      margin-top: 3.2rem;
+    }
+
+    &__th {
+      font-size: 1.4rem;
+      min-width: 12.6rem;
+      padding: 1.2rem;
+    }
+
+    &__td {
+      font-size: 1.4rem;
+      padding: 1.2rem;
+    }
+  }
+}
